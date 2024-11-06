@@ -45,7 +45,7 @@ local o; o = hookfunction(getrenv().debug.info, newcclosure(function(...)
 
     if x and a == x then
         if d then
-            warn(`zins | adonis bypassed`)
+
         end
 
         return coroutine.yield(coroutine.running())
