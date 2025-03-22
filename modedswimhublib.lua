@@ -3,6 +3,11 @@ if not memorystats then memorystats={} memorystats.cache=function(a)end memoryst
 for i,v in pairs(({"Internal","HttpCache","Instances","Signals","Script","PhysicsCollision","PhysicsParts","GraphicsSolidModels","GraphicsMeshParts","GraphicsParticles","GraphicsParts","GraphicsSpatialHash","GraphicsTerrain","GraphicsTexture","GraphicsTextureCharacter","Sounds","StreamingSounds","TerrainVoxels","Gui","Animation","Navigation","GeometryCSG"})) do
     memorystats.cache(v)
 end
+local abcdf = false
+if getgenv().setthreadidentity then
+    abcdf = true
+    setthreadidentity(8)
+end
 local InputService = cloneref(game:GetService('UserInputService'));
 local TextService = cloneref(game:GetService('TextService'));
 local CoreGui = cloneref(game:GetService('CoreGui'));
